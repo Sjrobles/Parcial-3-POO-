@@ -1,11 +1,16 @@
 import random as rnd
-
-
 class turno:
   def __init__(self):
     
     self.camiones = 3
-    self.empleados = 6
+    self.empleados = 9
+  
+
+
+
+
+
+
 
 
 class puntogeografico:
@@ -29,7 +34,7 @@ class Trashcity:
 
   def __init__(self):
     
-    self.idempleados = [123,321,666,777,888,999,555,234,809]
+    self.idempleados = [123,321,666,777,888,999,555,234,809,352,790,376,213]
     self.latitud = 0
     self.longitud = 0
     self.tiempo = int
@@ -63,8 +68,15 @@ class Trashcity:
     for i in range(3):
       print("Empleado con identificacion:")
       print(self.idempleados[i])
+    self.idempleados.pop(0)
+    self.idempleados.pop(1)
+    self.idempleados.pop(2)
+
+
+
+      
     print("Estos empleados ya no se encuentran disponibles para turnos hoy")
-    self.empleados = self.empleados - 2
+    self.empleados = self.empleados - 3
     
       
       
@@ -118,7 +130,7 @@ if op == "si":
 
     
     y = puntogeografico()
-    t.iniciar_recoleccion(y.latitud,y.longitud,z.camiones,z.empleados)
+    t.iniciar_recoleccion(y.latitud,y.longitud,t.camiones,t.empleados)
     if t.switch == True:
 
        
@@ -154,6 +166,13 @@ else:
 
           
       
+
+
+
+        
+
+
+
 
 
 
