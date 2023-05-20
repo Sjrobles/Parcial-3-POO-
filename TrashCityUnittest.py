@@ -112,48 +112,7 @@ class CentroAcopio:
 
 
 
-op=input("Desea iniciar el dia? si o no ")
 
-if op == "si":
-  z = turno()
-  y = puntogeografico()
-  x = tiempo()
-  t = Trashcity()
-  t.iniciar_recoleccion(y.latitud,y.longitud,z.camiones,z.empleados)
-  t.valorar_turno(x.horas,x.minutos,x.segundos)
-  c = CentroAcopio()
-  c.reciclar()
-
-  op2 = input("Desea hacer otro turno? si o no ")
-  while op2 == "si":
-    print("--------------------------------------------------------")
-
-    
-    y = puntogeografico()
-    t.iniciar_recoleccion(y.latitud,y.longitud,t.camiones,t.empleados)
-    if t.switch == True:
-
-       
-     x = tiempo()
-
-     t.valorar_turno(x.horas,x.minutos,x.segundos)
-
-     c.reciclar()
-     
-    
-      
-    op2 = input("Desea hacer otro turno? si o no ")
-  else:
-    print("Se acabaron los turnos por hoy, ya sea por falta de camiones y/o empleados, o el gerente decidió cerrar")  
-   
-
-
-else:
- print("El dia de hoy no se recogió basura")  
-
-
-#Se realizo el ejemplo con un numero de camiones y empleados delimitados por mi, la cantidad de turnos posibles dependera de si el usuario quiere parar#
-# o si el numero de camiones o empleados es insuficiente#
 #-------------------------------------------------------------------------------------------------------------------------------------~#
 
 
