@@ -158,7 +158,6 @@ else:
 
 
 import unittest
-from TrashCityUnittest import turno, puntogeografico, tiempo, Trashcity, CentroAcopio
 
 class TestTrashcity(unittest.TestCase):
     def test_iniciar_recoleccion(self):
@@ -192,37 +191,7 @@ class TestCentroAcopio(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 
-class TestTrashcity(unittest.TestCase):
-    def test_iniciar_recoleccion(self):
-        t = Trashcity()
-        t.iniciar_recoleccion(10, 20, 2, 4)
-        self.assertEqual(t.camiones, 1)
-        self.assertEqual(t.empleados, 4)
-        self.assertEqual(t.latitud, 10)
-        self.assertEqual(t.longitud, 20)
-        self.assertTrue(t.switch)
 
-    def test_valorar_turno(self):
-        t = Trashcity()
-        t.valorar_turno(2, 30, 45)
-        self.assertEqual(t.horas, 2)
-        self.assertEqual(t.minutos, 30)
-        self.assertEqual(t.segundos, 45)
-        self.assertEqual(len(t.idempleados), 10)
-        self.assertEqual(t.empleados, 6)
-
-class TestCentroAcopio(unittest.TestCase):
-    def test_reciclar(self):
-        c = CentroAcopio()
-        c.reciclar()
-        self.assertTrue(1 <= c.vidrio <= 10)
-        self.assertTrue(1 <= c.papel <= 10)
-        self.assertTrue(1 <= c.plastico <= 10)
-        self.assertTrue(1 <= c.metal <= 10)
-        self.assertTrue(1 <= c.organicos <= 10)
-
-if __name__ == '__main__':
-    unittest.main()
 
 
 
